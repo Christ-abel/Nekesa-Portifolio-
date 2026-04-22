@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christabel Nekesa | ML Engineer &amp; Developer</title>
+  <meta name="description"
+    content="Christabel Walumbe (Nekesa) — Data &amp; Machine Learning Engineer, Computer Vision Specialist, and Automation Architect based in Nairobi. Building intelligent systems that learn, see, and automate." />
+  <meta name="keywords"
+    content="Machine Learning Engineer, Data Engineer, Computer Vision, YOLO, n8n Automation, Python, React, Nairobi, Kenya, Software Developer" />
+  <meta name="author" content="Christabel Walumbe Nekesa" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Christabel Nekesa | ML Engineer &amp; Developer" />
+  <meta property="og:description"
+    content="Building intelligent systems that learn, see, and automate. ML Engineer · Computer Vision · Automation Architect." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nekesa.dev" />
+  <meta property="og:image" content="./assets/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Christabel Nekesa | ML Engineer &amp; Developer" />
+  <meta name="twitter:description" content="Building intelligent systems that learn, see, and automate." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================ NAVBAR -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Nekesa Home">
+        <span class="logo-text">Nekesa</span>
+        <span class="logo-dot"></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="nav-cta" id="nav-cta-btn" aria-label="Let's Connect">
+        <span>Let's Connect</span>
+        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false"
+        aria-controls="nav-links">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================ MOBILE MENU OVERLAY -->
+  <div class="mobile-menu-overlay" id="mobile-overlay" aria-hidden="true">
+    <ul class="mobile-nav-links" role="list">
+      <li><a href="#home" class="mobile-nav-link">Home</a></li>
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <a href="#contact" class="mobile-cta">Let's Connect</a>
+  </div>
+
+  <!-- ============================================================ HERO -->
+  <section class="hero" id="home" aria-label="Hero section">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-grid-overlay" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-greeting" data-aos="fade-up" data-aos-delay="100">
+        <span class="greeting-line">Hello, I'm</span>
+      </div>
+
+      <h1 class="hero-name" data-aos="fade-up" data-aos-delay="200">
+        CHRISTABEL<br /><span class="name-accent">NEKESA</span>
+      </h1>
+
+      <div class="hero-typewriter" data-aos="fade-up" data-aos-delay="400" aria-live="polite">
+        <span class="typewriter-prefix">I build </span>
+        <span class="typewriter-text" id="typewriter-text" aria-label="Dynamic role title"></span>
+        <span class="typewriter-cursor" aria-hidden="true">|</span>
+      </div>
+
+      <p class="hero-tagline" data-aos="fade-up" data-aos-delay="600">
+        Building intelligent systems that <em>learn</em>, <em>see</em>, and <em>automate</em>.
+      </p>
+
+      <div class="hero-ctas" data-aos="fade-up" data-aos-delay="800">
+        <a href="#projects" class="btn btn-primary" id="view-work-btn">
+          <span>View My Work</span>
+          <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </a>
+        <a href="./assets/CV_Christabel_Nekesa.html" class="btn btn-secondary" id="download-cv-btn"
+          download="CV_Christabel_Nekesa.html" target="_blank" aria-label="Download CV">
+          <i class="fas fa-download" aria-hidden="true"></i>
+          <span>Download CV</span>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================ ABOUT -->
+  <section class="about section" id="about" aria-label="About section">
+    <div class="section-bg-decoration" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">
+        <span class="label-line"></span>
+        <span class="label-text">WHO I AM</span>
+        <span class="label-line"></span>
+      </div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">About Nekesa</h2>
+
+      <div class="about-grid">
+        <!-- Left: Photo -->
+        <div class="about-photo-col" data-aos="fade-right" data-aos-delay="200">
+          <div class="photo-wrapper">
+            <div class="photo-ring" aria-hidden="true"></div>
+            <div class="photo-placeholder" aria-label="Profile photo of Christabel Nekesa">
+              <img src="./assets/profile.jpeg" alt="Christabel Nekesa — ML Engineer & Developer" class="profile-photo"
+                width="280" height="280" />
+            </div>
+            <div class="photo-decorations" aria-hidden="true">
+              <div class="deco-dot deco-dot-1"></div>
+              <div class="deco-dot deco-dot-2"></div>
+              <div class="deco-dot deco-dot-3"></div>
+              <div class="deco-circuit"></div>
+            </div>
+          </div>
+
+          <div class="location-badge" data-aos="fade-up" data-aos-delay="400">
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            <span>Nairobi, Kenya</span>
+          </div>
+        </div>
+
+        <!-- Right: Bio -->
+        <div class="about-bio-col" data-aos="fade-left" data-aos-delay="300">
+          <div class="bio-header">
+            <h3 class="bio-name">Nekesa</h3>
+          </div>
+
+          <p class="bio-text">
+            I'm Christabel Walumbe, a Data &amp; Machine Learning Engineer based in Nairobi, passionate about building
+            systems that don't just process data, but <strong>understand it</strong>. My core focus spans Machine
+            Learning model development, Computer Vision pipelines using YOLO and OCR, and intelligent workflow
+            automation with n8n.
+          </p>
+          <p class="bio-text">
+            I am currently pursuing a Degree in Data Science from Cooperative University of Kenya, with a strong
+            foundation in data engineering, full-stack development, and the applied sciences of making machines think.
+          </p>
+          <p class="bio-text">
+            I believe in clean architecture, purposeful design, and technology that works silently in the background to
+            deliver results at the forefront.
+          </p>
+
+          <div class="bio-tags">
+            <span class="bio-tag"><i class="fas fa-brain" aria-hidden="true"></i> ML Engineer</span>
+            <span class="bio-tag"><i class="fas fa-eye" aria-hidden="true"></i> Computer Vision</span>
+            <span class="bio-tag"><i class="fas fa-cogs" aria-hidden="true"></i> Automation</span>
+            <span class="bio-tag"><i class="fas fa-code" aria-hidden="true"></i> Full-Stack Dev</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stat Cards -->
+      <div class="stat-cards" data-aos="fade-up" data-aos-delay="400">
+        <div class="stat-card glass-card" id="stat-ml">
+          <div class="stat-icon"><i class="fas fa-brain" aria-hidden="true"></i></div>
+          <div class="stat-content">
+            <div class="stat-number" data-target="12">0</div>
+            <div class="stat-label">ML &amp; Computer Vision Projects</div>
+          </div>
+        </div>
+        <div class="stat-card glass-card" id="stat-automation">
+          <div class="stat-icon"><i class="fas fa-robot" aria-hidden="true"></i></div>
+          <div class="stat-content">
+            <div class="stat-number" data-target="20">0</div>
+            <div class="stat-label">n8n Automation Workflows</div>
+          </div>
+        </div>
+        <div class="stat-card glass-card" id="stat-web">
+          <div class="stat-icon"><i class="fas fa-globe" aria-hidden="true"></i></div>
+          <div class="stat-content">
+            <div class="stat-number" data-target="15">0</div>
+            <div class="stat-label">Web &amp; Software Applications</div>
+          </div>
+        </div>
+        <div class="stat-card glass-card" id="stat-learning">
+          <div class="stat-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
+          <div class="stat-content">
+            <div class="stat-badge">ACTIVE</div>
+            <div class="stat-label">Currently Levelling Up</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ SKILLS -->
+  <section class="skills section" id="skills" aria-label="Skills section">
+    <div class="skills-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">
+        <span class="label-line"></span>
+        <span class="label-text">CAPABILITIES</span>
+        <span class="label-line"></span>
+      </div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Technical Arsenal</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="150">
+        From raw data to intelligent decisions — the full stack of tools I deploy.
+      </p>
+
+      <div class="skills-clusters">
+
+        <!-- Cluster 1: Data & ML -->
+        <div class="skill-cluster" data-aos="fade-up" data-aos-delay="200">
+          <div class="cluster-header">
+            <div class="cluster-icon cluster-icon-blue">
+              <i class="fas fa-brain" aria-hidden="true"></i>
+            </div>
+            <h3 class="cluster-title">Data &amp; Machine Learning</h3>
+          </div>
+          <div class="skill-tags" role="list">
+            <span class="skill-tag" role="listitem">Python</span>
+            <span class="skill-tag" role="listitem">TensorFlow</span>
+            <span class="skill-tag" role="listitem">PyTorch</span>
+            <span class="skill-tag" role="listitem">Scikit-learn</span>
+            <span class="skill-tag" role="listitem">Pandas</span>
+            <span class="skill-tag" role="listitem">NumPy</span>
+            <span class="skill-tag" role="listitem">OpenCV</span>
+            <span class="skill-tag skill-tag-pink" role="listitem">YOLO v5/v8</span>
+            <span class="skill-tag skill-tag-pink" role="listitem">OCR (Tesseract / EasyOCR)</span>
+            <span class="skill-tag" role="listitem">Jupyter</span>
+            <span class="skill-tag" role="listitem">MLflow</span>
+          </div>
+        </div>
+
+        <!-- Cluster 2: Engineering & Dev -->
+        <div class="skill-cluster" data-aos="fade-up" data-aos-delay="300">
+          <div class="cluster-header">
+            <div class="cluster-icon cluster-icon-pink">
+              <i class="fas fa-code" aria-hidden="true"></i>
+            </div>
+            <h3 class="cluster-title">Engineering &amp; Development</h3>
+          </div>
+          <div class="skill-tags" role="list">
+            <span class="skill-tag" role="listitem">JavaScript</span>
+            <span class="skill-tag" role="listitem">React</span>
+            <span class="skill-tag" role="listitem">Node.js</span>
+            <span class="skill-tag skill-tag-pink" role="listitem">FastAPI</span>
+            <span class="skill-tag" role="listitem">Flask</span>
+            <span class="skill-tag" role="listitem">PostgreSQL</span>
+            <span class="skill-tag" role="listitem">MongoDB</span>
+            <span class="skill-tag" role="listitem">Docker</span>
+            <span class="skill-tag" role="listitem">Git / GitHub</span>
+            <span class="skill-tag skill-tag-pink" role="listitem">REST APIs</span>
+          </div>
+        </div>
+
+        <!-- Cluster 3: Automation & Infra -->
+        <div class="skill-cluster" data-aos="fade-up" data-aos-delay="400">
+          <div class="cluster-header">
+            <div class="cluster-icon cluster-icon-blue">
+              <i class="fas fa-cogs" aria-hidden="true"></i>
+            </div>
+            <h3 class="cluster-title">Automation &amp; Infrastructure</h3>
+          </div>
+          <div class="skill-tags" role="list">
+            <span class="skill-tag skill-tag-pink" role="listitem">n8n</span>
+            <span class="skill-tag" role="listitem">Webhooks</span>
+            <span class="skill-tag" role="listitem">API Integrations</span>
+            <span class="skill-tag" role="listitem">GitHub Actions</span>
+            <span class="skill-tag" role="listitem">Linux</span>
+            <span class="skill-tag" role="listitem">AWS (Basics)</span>
+            <span class="skill-tag" role="listitem">GCP (Basics)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ PROJECTS -->
+  <section class="projects section" id="projects" aria-label="Projects section">
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">
+        <span class="label-line"></span>
+        <span class="label-text">PORTFOLIO</span>
+        <span class="label-line"></span>
+      </div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">
+        Projects <span class="title-comment">// Live from GitHub</span>
+      </h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="150">
+        Real repositories. Automatically synced from GitHub. Last updated: <span id="last-updated"
+          aria-live="polite">—</span>
+      </p>
+
+      <!-- Filter Bar -->
+      <div class="project-filters" data-aos="fade-up" data-aos-delay="200" role="group"
+        aria-label="Filter projects by category">
+        <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
+        <button class="filter-btn" data-filter="ml" id="filter-ml">ML / AI</button>
+        <button class="filter-btn" data-filter="web" id="filter-web">Web Dev</button>
+        <button class="filter-btn" data-filter="automation" id="filter-automation">Automation</button>
+        <button class="filter-btn" data-filter="data" id="filter-data">Data</button>
+      </div>
+
+      <!-- Project Grid -->
+      <div class="projects-grid" id="projects-grid" role="list" aria-label="Project cards">
+        <!-- Skeleton loaders shown on first load -->
+        <div class="project-skeleton glass-card" aria-hidden="true"></div>
+        <div class="project-skeleton glass-card" aria-hidden="true"></div>
+        <div class="project-skeleton glass-card" aria-hidden="true"></div>
+        <div class="project-skeleton glass-card" aria-hidden="true"></div>
+        <div class="project-skeleton glass-card" aria-hidden="true"></div>
+        <div class="project-skeleton glass-card" aria-hidden="true"></div>
+      </div>
+
+      <!-- Error State -->
+      <div class="projects-error" id="projects-error" aria-live="polite" style="display:none;">
+        <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+        <p>Could not fetch projects. <button onclick="fetchGitHubRepos(true)" id="retry-projects-btn">Retry</button></p>
+      </div>
+
+      <!-- Empty State -->
+      <div class="projects-empty" id="projects-empty" style="display:none;">
+        <i class="fas fa-folder-open" aria-hidden="true"></i>
+        <p>No projects found for this filter.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ CONTACT -->
+  <section class="contact section" id="contact" aria-label="Contact section">
+    <div class="contact-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">
+        <span class="label-line"></span>
+        <span class="label-text">GET IN TOUCH</span>
+        <span class="label-line"></span>
+      </div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Let's Build Something</h2>
+
+      <div class="contact-grid">
+        <!-- Left: Info -->
+        <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+          <p class="contact-pitch">
+            Whether you're looking to collaborate on a machine learning project, automate your workflows, or build
+            something exceptional from scratch — I'm open to the conversation.
+          </p>
+
+          <ul class="contact-details" role="list">
+            <li class="contact-item">
+              <div class="contact-icon-wrap">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">Email</span>
+                <a href="mailto:nekesac289@gmail.com" class="contact-link">nekesac289@gmail.com</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="contact-icon-wrap">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/christabel-nekesa-a18534292" target="_blank"
+                  rel="noopener noreferrer" class="contact-link">Christabel Nekesa</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="contact-icon-wrap contact-icon-pink">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">Instagram</span>
+                <a href="https://www.instagram.com/walumbe_1" target="_blank" rel="noopener noreferrer"
+                  class="contact-link">@walumbe_1</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="contact-icon-wrap contact-icon-pink">
+                <i class="fab fa-tiktok" aria-hidden="true"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">TikTok</span>
+                <a href="https://tiktok.com/@chri_sta" target="_blank" rel="noopener noreferrer"
+                  class="contact-link">@chri_sta</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="contact-icon-wrap">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">GitHub</span>
+                <a href="https://github.com/Christ-abel" target="_blank" rel="noopener noreferrer"
+                  class="contact-link">Christ-abel</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form-wrap" data-aos="fade-left" data-aos-delay="300">
+          <form class="contact-form glass-card" id="contact-form" action="https://formspree.io/f/meevrdwb" method="POST"
+            aria-label="Contact form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Name</label>
+                <input type="text" id="contact-name" name="name" class="form-input" placeholder="Your full name"
+                  required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email</label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="your@email.com"
+                  required autocomplete="email" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-subject" class="form-label">Subject</label>
+              <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="What's this about?"
+                required />
+            </div>
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Message</label>
+              <textarea id="contact-message" name="message" class="form-input form-textarea"
+                placeholder="Tell me about your project, idea, or collaboration..." rows="5" required></textarea>
+            </div>
+
+            <input type="hidden" name="_subject" value="New message from Nekesa Portfolio" />
+
+            <button type="submit" class="btn btn-primary btn-full" id="send-message-btn">
+              <span class="btn-text">Send Message</span>
+              <i class="fas fa-paper-plane" aria-hidden="true"></i>
+            </button>
+
+            <div class="form-feedback" id="form-feedback" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ FOOTER -->
+  <footer class="footer" aria-label="Footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#home" class="footer-logo">Nekesa</a>
+        <p class="footer-copy">© 2025 Christabel Walumbe · Nekesa</p>
+        <p class="footer-tagline"><em>Engineered with intent. Built to evolve.</em></p>
+      </div>
+
+      <div class="footer-center">
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links" role="list">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About</a></li>
+            <li><a href="#skills" class="footer-link">Skills</a></li>
+            <li><a href="#projects" class="footer-link">Projects</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-socials">
+          <a href="https://github.com/Christ-abel" target="_blank" rel="noopener noreferrer" class="social-icon"
+            aria-label="GitHub">
+            <i class="fab fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/christabel-nekesa-a18534292" target="_blank" rel="noopener noreferrer"
+            class="social-icon" aria-label="LinkedIn">
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com/walumbe_1" target="_blank" rel="noopener noreferrer" class="social-icon"
+            aria-label="Instagram">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://tiktok.com/@chri_sta" target="_blank" rel="noopener noreferrer" class="social-icon"
+            aria-label="TikTok">
+            <i class="fab fa-tiktok" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/canvas.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/github.js"></script>
+</body>
+
+</html>

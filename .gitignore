@@ -1,0 +1,40 @@
+# ============================================================
+# Nekesa Portfolio — .gitignore
+# ============================================================
+
+# ── OS generated files ──────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── Editor / IDE ─────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ── Node (in case npm is ever used) ─────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env.local
+.env.*.local
+
+# ── Build outputs ────────────────────────────────────────────
+dist/
+build/
+.cache/
+
+# ── Duplicate root-level photo ───────────────────────────────
+# The real image lives in assets/profile.jpeg — this is the stale copy.
+portfolio profile.jpeg
