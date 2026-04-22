@@ -666,6 +666,7 @@ body.js-ready [data-aos="fade-left"]:not(.aos-visible)  { transform: translateX(
   font-size: 1.6rem;
   font-weight: 700;
   color: var(--text-white);
+  margin-top: 10px;
 }
 .bio-alias {
   font-size: 0.85rem;
@@ -1292,7 +1293,7 @@ body.js-ready [data-aos="fade-left"]:not(.aos-visible)  { transform: translateX(
 }
 
 @media (max-width: 768px) {
-  :root { --section-pad: 80px; }
+  :root { --section-pad: 100px; }
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
   .about-grid { grid-template-columns: 1fr; }
@@ -1309,7 +1310,7 @@ body.js-ready [data-aos="fade-left"]:not(.aos-visible)  { transform: translateX(
 }
 
 @media (max-width: 480px) {
-  :root { --section-pad: 64px; }
+  :root { --section-pad: 90px; }
   .stat-cards { grid-template-columns: 1fr; }
   .hero-ctas { flex-direction: column; align-items: stretch; }
   .btn { justify-content: center; }
