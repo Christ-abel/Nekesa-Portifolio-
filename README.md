@@ -2,13 +2,13 @@
 
 > ML Engineer · Computer Vision · Automation Architect
 
-A fully responsive, animated personal portfolio for **Christabel Walumbe (Nekesa)** — built with vanilla HTML, CSS, and JavaScript. No frameworks, no build step. Ready to host anywhere.
+A fully responsive, animated personal portfolio for **Christabel Walumbe Nekesa** — built with vanilla HTML, CSS, and JavaScript. No frameworks, no build step. Ready to host anywhere.
 
-## 🚀 Live Demo
+##  Live Demo
 
-[https://christ-abel.github.io/Nekesa-Portifolio-](https://christ-abel.github.io/Nekesa-Portifolio-)
+[https://nekesa-portifolio.vercel.app](https://nekesa-portifolio.vercel.app)
 
-## ✨ Features
+##  Features
 
 - **Particle canvas** — animated hero background
 - **Typewriter effect** — rotating role titles
@@ -34,24 +34,9 @@ Nekesa-Portifolio-/
     └── CV_Christabel_Nekesa.html  # Downloadable CV
 ```
 
-## 🌐 Hosting
 
-This is a **static site** — no backend or server required.
 
-### Host on GitHub Pages (recommended)
-1. Go to your repo → **Settings → Pages**
-2. Source: **Deploy from a branch** → `main` → `/ (root)`
-3. Save — your site will be live at `https://christ-abel.github.io/Nekesa-Portifolio-`
-
-### Host on Netlify
-1. Drag & drop the project folder onto [netlify.com/drop](https://app.netlify.com/drop)
-2. Or connect your GitHub repo for automatic deployments on every push.
-
-## 📬 Contact Form
-
-The contact form uses [Formspree](https://formspree.io) — submissions go straight to `nekesac289@gmail.com` with no backend code needed.
-
-## 👩‍💻 Author
+##  Author
 
 **Christabel Walumbe Nekesa**  
 [GitHub](https://github.com/Christ-abel) · [LinkedIn](https://www.linkedin.com/in/christabel-nekesa-a18534292)
