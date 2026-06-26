@@ -26,6 +26,24 @@
   const AUTOMATION_KEYWORDS = ['n8n', 'automation', 'workflow', 'bot', 'scraper', 'webhook', 'cron', 'scheduler'];
   const DATA_KEYWORDS = ['data', 'analytics', 'pandas', 'etl', 'pipeline', 'database', 'sql', 'visualization', 'dashboard', 'notebook'];
 
+  // Custom descriptions for each repo (human-written, shown instead of GitHub description)
+  const REPO_DESCRIPTIONS = {
+    'cheston-property-app':        'A full-stack property management app for tracking listings, tenants and rental activity in one place.',
+    'Nekesa-Portifolio-':          'My personal portfolio site showcasing machine learning, computer vision, automation and web development work.',
+    'AI4EAC-Finance-challenge-':   'A machine learning submission for the AI4EAC Finance Challenge, tackling predictive modeling on financial datasets.',
+    'align-teams-final':           'A team collaboration tool built to help groups stay aligned on goals, tasks and project timelines.',
+    'tiktok-data-analysis':        'An exploratory data analysis project examining TikTok engagement metrics to surface trends in content performance.',
+    'Walumbeweb':                  'A responsive personal web project built to experiment with modern frontend layouts and design patterns.',
+    'TraficVolumePrediction':      'A machine learning model that forecasts road traffic volume to support smarter urban planning decisions.',
+    'LOGO-Detector':               'A computer vision system that detects and identifies brand logos in images, trained using YOLO architecture.',
+    'carPricePredictor2':          'An improved car price estimator with enhanced feature engineering and better predictive accuracy than the first version.',
+    'CarpricePredictor':           'A regression model that estimates the market price of used cars based on make, model, mileage and condition.',
+    'real_estate_predictor-':      'A predictive model that estimates property values using location data and key real estate features.',
+    'ServiceApp':                  'A service request management application for logging, tracking and resolving support tickets from start to finish.',
+    'LINEAR-REGRESSION':           'A from-scratch implementation of linear regression built to deepen understanding of the algorithm and its math.',
+    'myProject':                   'An early personal project used to explore development concepts, experiment with tooling and build foundational skills.',
+  };
+
   // Language → color map (GitHub standard)
   const LANG_COLORS = {
     Python: '#3572A5',
@@ -187,7 +205,7 @@
   function buildCard(repo, idx) {
     const langColor = LANG_COLORS[repo.language] || '#60A5FA';
     const name = formatRepoName(repo.name);
-    const desc = repo.description || 'No description provided.';
+    const desc = REPO_DESCRIPTIONS[repo.name] || repo.description || 'A project by Christabel Nekesa.';
     const topics = (repo.topics || []).slice(0, 4);
     const categories = classifyRepo(repo);
 

@@ -76,22 +76,29 @@
 
   // Hamburger toggle
   if (hamburger && overlay) {
+    function closeMenu() {
+      hamburger.classList.remove('open');
+      overlay.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      overlay.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
     hamburger.addEventListener('click', () => {
       const isOpen = hamburger.classList.toggle('open');
       overlay.classList.toggle('open', isOpen);
-      hamburger.setAttribute('aria-expanded', isOpen);
-      overlay.setAttribute('aria-hidden', !isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+      overlay.setAttribute('aria-hidden', String(!isOpen));
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
+    // Close when tapping the dark backdrop (outside menu items)
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closeMenu();
+    });
+
     mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        overlay.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', false);
-        overlay.setAttribute('aria-hidden', true);
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', closeMenu);
     });
   }
 
