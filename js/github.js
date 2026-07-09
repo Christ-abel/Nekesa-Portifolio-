@@ -13,10 +13,10 @@
   //   CONSTANTS
   // ============================================================
   const GITHUB_USERNAME = 'Christ-abel';
-  const API_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=12`;
+  const API_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=30`;
   const TOPICS_URL_BASE = `https://api.github.com/repos/${GITHUB_USERNAME}`;
   const CACHE_KEY = 'nekesa_gh_repos';
-  const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+  const CACHE_TTL = 30 * 60 * 1000; // 30 minutes
 
   // ML/AI keywords for auto-classification
   const ML_KEYWORDS = ['ml', 'ai', 'machine-learning', 'deep-learning', 'neural', 'yolo', 'ocr',
@@ -28,6 +28,7 @@
 
   // Custom descriptions for each repo (human-written, shown instead of GitHub description)
   const REPO_DESCRIPTIONS = {
+    'phc-pulse-hackathon':         'A hackathon project applying machine learning to healthcare data to uncover trends and support better clinical decisions.',
     'cheston-property-app':        'A full-stack property management app for tracking listings, tenants and rental activity in one place.',
     'Nekesa-Portifolio-':          'My personal portfolio site showcasing machine learning, computer vision, automation and web development work.',
     'AI4EAC-Finance-challenge-':   'A machine learning submission for the AI4EAC Finance Challenge, tackling predictive modeling on financial datasets.',
@@ -43,6 +44,24 @@
     'LINEAR-REGRESSION':           'A from-scratch implementation of linear regression built to deepen understanding of the algorithm and its math.',
     'myProject':                   'An early personal project used to explore development concepts, experiment with tooling and build foundational skills.',
   };
+
+  // Shown when GitHub API is unavailable (rate-limited, network issue, etc.)
+  const FALLBACK_REPOS = [
+    { name: 'phc-pulse-hackathon',      language: 'Python',           topics: ['ml', 'data'],                    stargazers_count: 0, forks_count: 0, html_url: 'https://github.com/Christ-abel/phc-pulse-hackathon',      fork: false },
+    { name: 'LOGO-Detector',            language: 'Python',           topics: ['computer-vision', 'yolo'],       stargazers_count: 0, forks_count: 0, html_url: 'https://github.com/Christ-abel/LOGO-Detector',            fork: false },
+    { name: 'TraficVolumePrediction',   language: 'Python',           topics: ['machine-learning', 'data'],      stargazers_count: 0, forks_count: 0, html_url: 'https://github.com/Christ-abel/TraficVolumePrediction',   fork: false },
+    { name: 'AI4EAC-Finance-challenge-',language: 'Python',           topics: ['machine-learning', 'data'],      stargazers_count: 0, forks_count: 0, html_url: 'https://github.com/Christ-abel/AI4EAC-Finance-challenge-',fork: false },
+    { name: 'tiktok-data-analysis',     language: 'Jupyter Notebook', topics: ['data', 'analytics'],             stargazers_count: 0, forks_count: 0, html_url: 'https://github.com/Christ-abel/tiktok-data-analysis',     fork: false },
+    { name: 'cheston-property-app',     language: 'JavaScript',       topics: ['web', 'app'],                    stargazers_count: 0, forks_count: 0, html_url: 'https://github.com/Christ-abel/cheston-property-app',     fork: false },
+    { name: 'align-teams-final',        language: 'JavaScript',       topics: ['web', 'app'],                    stargazers_count: 0, forks_count: 0, html_url: 'https://github.com/Christ-abel/align-teams-final',        fork: false },
+    { name: 'Walumbeweb',               language: 'HTML',             topics: ['web'],                           stargazers_count: 0, forks_count: 0, html_url: 'https://github.com/Christ-abel/Walumbeweb',               fork: false },
+    { name: 'carPricePredictor2',       language: 'Python',           topics: ['machine-learning', 'python'],    stargazers_count: 0, forks_count: 0, html_url: 'https://github.com/Christ-abel/carPricePredictor2',       fork: false },
+    { name: 'CarpricePredictor',        language: 'Python',           topics: ['machine-learning'],              stargazers_count: 0, forks_count: 0, html_url: 'https://github.com/Christ-abel/CarpricePredictor',        fork: false },
+    { name: 'real_estate_predictor-',   language: 'Python',           topics: ['machine-learning', 'data'],      stargazers_count: 0, forks_count: 0, html_url: 'https://github.com/Christ-abel/real_estate_predictor-',   fork: false },
+    { name: 'ServiceApp',               language: 'JavaScript',       topics: ['web', 'app'],                    stargazers_count: 0, forks_count: 0, html_url: 'https://github.com/Christ-abel/ServiceApp',               fork: false },
+    { name: 'LINEAR-REGRESSION',        language: 'Python',           topics: ['machine-learning', 'python'],    stargazers_count: 0, forks_count: 0, html_url: 'https://github.com/Christ-abel/LINEAR-REGRESSION',        fork: false },
+    { name: 'myProject',                language: 'JavaScript',       topics: ['web'],                           stargazers_count: 0, forks_count: 0, html_url: 'https://github.com/Christ-abel/myProject',               fork: false },
+  ];
 
   // Language → color map (GitHub standard)
   const LANG_COLORS = {
@@ -141,9 +160,10 @@
       renderRepos();
       updateLastUpdated();
     } catch (err) {
-      console.error('[GitHub Fetch]', err);
-      grid.innerHTML = '';
-      errorEl.style.display = 'flex';
+      console.warn('[GitHub Fetch] API unavailable, using fallback data.', err);
+      allRepos = FALLBACK_REPOS;
+      renderRepos();
+      updateLastUpdated();
     }
   }
 
@@ -303,10 +323,7 @@
     });
   });
 
-  // ============================================================
-  //   AUTO-REFRESH (poll every 5 minutes)
-  // ============================================================
-  setInterval(() => fetchGitHubRepos(true), CACHE_TTL);
+  // No auto-refresh — cache lasts 30 min and retry button exists for manual refresh
 
   // ============================================================
   //   INIT
